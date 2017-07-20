@@ -1,15 +1,14 @@
 /* global window */
 
-import { combineReducers, createStore } from 'redux';
-import matchReportApp from './reducers';
+import { createStore } from 'redux';
+import appReducers from './reducers';
 
-const reducers = combineReducers({
-  matchReportApp,
-});
 
 /* eslint-disable no-underscore-dangle */
-export default createStore(
-  reducers,
+const store = createStore(
+  appReducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
 /* eslint-enable */
+
+export default store;

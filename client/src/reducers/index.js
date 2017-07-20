@@ -1,21 +1,11 @@
-import types from './../constants';
+import { combineReducers } from 'redux';
 
-export const initialState = {
-  data: {},
-  activeFilter: null,
-};
+import data from './data';
+import filter from './filter';
 
-export const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case types.SET_FILTER:
-      return {
-        ...state,
-        activeFilter: action.filter,
-      };
+const appReducers = combineReducers({
+  data,
+  filter,
+});
 
-    default:
-      return state;
-  }
-};
-
-export default reducer;
+export default appReducers;
