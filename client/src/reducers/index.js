@@ -2,7 +2,7 @@ import types from './../constants';
 
 export const initialState = {
   data: {},
-  activeFilter: undefined,
+  activeFilter: null,
 };
 
 export const reducer = (state = initialState, action) => {
