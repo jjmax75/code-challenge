@@ -1,5 +1,8 @@
+/* global document */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import App from './App/App';
 
-ReactDOM.render(<div>Sportdec</div>, document.querySelector('#root'));
+ReactDOM.render(<App />, document.querySelector('#root'));
