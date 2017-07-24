@@ -2,9 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import actions from './../actions/';
+import './Main.scss';
 
 export const App = () => (
-  <div>Sportdec</div>
+  <div>
+    <header><img src='./img/header-logo.png' alt='Sportdec' /></header>
+    <main>Sport Dec</main>
+    <footer>Footer</footer>
+  </div>
 );
 
 App.propTypes = {

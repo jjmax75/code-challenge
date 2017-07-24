@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import './index.css';
+import './index.scss';
 /* eslint-disable import/no-named-as-default */
 import App from './app/Main';
 /* eslint-enable */
