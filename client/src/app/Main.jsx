@@ -7,7 +7,14 @@ import './Main.scss';
 export const App = () => (
   <div>
     <header><img src='./img/header-logo.png' alt='Sportdec' /></header>
-    <main>Sport Dec</main>
+    <main>
+      <ol>
+        <li>Teams</li>
+        <li>Details - time, venue, final score</li>
+        <li>Timeline</li>
+        <li>Speech summary of game</li>
+      </ol>
+    </main>
     <footer>Footer</footer>
   </div>
 );
