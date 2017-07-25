@@ -5,7 +5,13 @@ import './Main.scss';
 // components
 import TeamDetails from './teamDetails/';
 import MatchDetails from './matchDetails/';
+import Filters from './filters/';
 import Timeline from './timeline/';
+import MatchReport from './matchReport/';
+
+const handlePlayMatchReport = (report) => {
+  console.log('play match report:', report);
+};
 
 export const App = props => (
   <div>
@@ -19,12 +25,11 @@ export const App = props => (
     <main>
       <TeamDetails teamData={props.teamData} />
       <MatchDetails allData={props.allData} />
+      <Filters handleFilterChange={props.filterEvents} />
       <Timeline filteredEvents={props.filteredEvents} />
-      <ol>
-        <li>Speech summary of game</li>
-      </ol>
+      <MatchReport handlePlayMatchReport={() => handlePlayMatchReport(props.report)} />
     </main>
-    <footer>Footer</footer>
+    <footer>Match Report App Coding Challenge by John Behan</footer>
   </div>
 );
 
@@ -38,6 +43,8 @@ App.propTypes = {
   allData: PropTypes.objectOf(
     PropTypes.any,
   ).isRequired,
+  report: PropTypes.string.isRequired,
+  filterEvents: PropTypes.func.isRequired,
 };
 
 export default App;

@@ -1,9 +1,11 @@
 @import './../sportdec-colors.scss';
 
-header {
+header, footer {
   background-color: $royal;
   padding: 10px 0;
   text-align: center;
+  color: $stable;
+  font-weight: bold;
 }
 
 .header__image {

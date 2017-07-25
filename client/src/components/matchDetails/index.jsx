@@ -8,7 +8,7 @@ const MatchDetails = props => (
 );
 
 MatchDetails.propTypes = {
-  allData: PropTypes.arrayOf(
+  allData: PropTypes.objectOf(
     PropTypes.any,
   ).isRequired,
 };

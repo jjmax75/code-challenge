@@ -1,3 +1,5 @@
+@import './sportdec-colors.scss';
+
 @font-face {
   font-family: 'icomoon';
   src: url('./font/icomoon.eot'); /* IE9 Compat Modes */
@@ -8,7 +10,7 @@
 }
 
 body {
-  background-color: #ffffff;
+  background-color: $stable;
   margin: 0;
   padding: 0;
   font-family: 'icomoon', sans-serif;
