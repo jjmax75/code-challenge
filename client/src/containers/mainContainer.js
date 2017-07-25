@@ -3,7 +3,9 @@ import actions from './../actions/';
 import Main from './../components/Main';
 
 const mapStateToProps = state => ({
-  data: state.data,
+  teamData: state.data.teamData,
+  filteredEvents: state.data.events,
+  allData: state.data.allData,
 });
 
 const mapDispatchToProps = dispatch => ({

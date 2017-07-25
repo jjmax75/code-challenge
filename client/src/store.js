@@ -3,7 +3,6 @@
 import { createStore } from 'redux';
 import appReducers from './reducers';
 
-
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
   appReducers,

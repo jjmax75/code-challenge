@@ -2,7 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Main.scss';
 
-export const App = () => (
+// components
+import TeamDetails from './teamDetails/';
+import MatchDetails from './matchDetails/';
+import Timeline from './timeline/';
+
+export const App = props => (
   <div>
     <header>
       <img
@@ -12,10 +17,10 @@ export const App = () => (
       />
     </header>
     <main>
+      <TeamDetails teamData={props.teamData} />
+      <MatchDetails allData={props.allData} />
+      <Timeline filteredEvents={props.filteredEvents} />
       <ol>
-        <li>Teams</li>
-        <li>Details - time, venue, final score</li>
-        <li>Timeline</li>
         <li>Speech summary of game</li>
       </ol>
     </main>
@@ -24,7 +29,15 @@ export const App = () => (
 );
 
 App.propTypes = {
-  data: PropTypes.string.isRequired,
+  teamData: PropTypes.arrayOf(
+    PropTypes.object.isRequired,
+  ).isRequired,
+  filteredEvents: PropTypes.arrayOf(
+    PropTypes.object.isRequired,
+  ).isRequired,
+  allData: PropTypes.objectOf(
+    PropTypes.any,
+  ).isRequired,
 };
 
 export default App;

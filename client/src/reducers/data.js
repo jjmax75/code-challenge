@@ -1,11 +1,12 @@
 import types from './../constants/';
-import matchData from './../json/match_sample.json';
 
-export default (state = matchData, action) => {
+export default (state = '', action) => {
   switch (action.type) {
     case types.SET_INITIAL_DATA:
       return {
-        data: action.data,
+        teamData: action.data.team_data,
+        events: action.data.events,
+        allData: action.data,
       };
 
     default:
