@@ -29,7 +29,7 @@ export const App = props => (
       <Timeline filteredEvents={props.filteredEvents} />
       <MatchReport handlePlayMatchReport={() => handlePlayMatchReport(props.report)} />
     </main>
-    <footer>Match Report App Coding Challenge by John Behan</footer>
+    <footer>Match Report App</footer>
   </div>
 );
 

@@ -8,6 +8,12 @@ header, footer {
   font-weight: bold;
 }
 
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
 .header__image {
   max-width: 80%;
 }
