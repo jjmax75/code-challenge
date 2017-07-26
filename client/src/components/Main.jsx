@@ -7,11 +7,6 @@ import TeamDetails from './teamDetails/';
 import MatchDetails from './matchDetails/';
 import Filters from './filters/';
 import Timeline from './timeline/';
-import MatchReport from './matchReport/';
-
-const handlePlayMatchReport = (report) => {
-  console.log('play match report:', report);
-};
 
 const getMatchDate = (date, tz) => {
   const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
@@ -57,7 +52,6 @@ export const App = props => (
       <MatchDetails allData={props.allData} />
       <Filters handleFilterChange={props.filterEvents} />
       <Timeline filteredEvents={props.filteredEvents} />
-      <MatchReport handlePlayMatchReport={() => handlePlayMatchReport(props.report)} />
     </main>
     <footer>Match Report App</footer>
   </div>
@@ -73,7 +67,6 @@ App.propTypes = {
   allData: PropTypes.objectOf(
     PropTypes.any,
   ).isRequired,
-  report: PropTypes.string.isRequired,
   filterEvents: PropTypes.func.isRequired,
 };
 
