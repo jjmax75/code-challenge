@@ -15,7 +15,7 @@ const getTeamScore = (team) => {
 
 const getTeamDetails = teamData => (
   teamData.map(team => (
-    <div>
+    <div key={team.teamref}>
       <div className='team-details__name'>
         { team.name }
       </div>

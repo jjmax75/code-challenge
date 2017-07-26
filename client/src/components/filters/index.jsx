@@ -1,9 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './filters.scss';
+
+const buildRadios = (handleFilterChange) => {
+  const filterTypes = ['Goal', 'Substitution', 'Booking', 'Penalty'];
+
+  return filterTypes.map(filter => (
+    <button
+      className='filters__button'
+      onClick={() => handleFilterChange(filter)}
+      key={filter}
+    >
+      {filter}
+    </button>
+  ));
+};
 
 const Filters = props => (
-  <div>
-    <button onClick={() => props.handleFilterChange('goals')}>Filters</button>
+  <div className='filters'>
+    { buildRadios(props.handleFilterChange) }
   </div>
 );
 
