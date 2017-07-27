@@ -3,7 +3,7 @@ import actions from './../actions/';
 import Main from './../components/Main';
 
 const getFilteredEvents = (filter, events) => {
-  if (!filter) return events;
+  if (filter === 'All') return events;
   return events.filter(event =>
     event.category.includes(filter.toLowerCase()));
 };

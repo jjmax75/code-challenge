@@ -1,15 +1,52 @@
 @import './../../assets/partials/sprites.scss';
 
+%event {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .timeline {}
 
 .timeline__event--home {
-  text-align: left;
+  @extend %event;
 }
 
 .timeline__event--away {
-  text-align: right;
+  @extend %event;
+  flex-flow: row-reverse;
 }
 
 .timeline__event--both {
-  text-align: center;
+  @extend %event;
+  justify-content: center;
+}
+
+.timeline__event--time {
+  margin: 0 10px;
+}
+
+.timeline__event--goal {
+  @extend %goal;
+}
+
+.timeline__event--substitution_off {
+  @extend %sub-off;
+}
+
+.timeline__event--substitution_on {
+  @extend %sub-on;
+}
+
+.timeline__event--penaltyshot-missed {
+  @extend %penalty-missed;
+}
+
+.timeline__event--penaltyshot-scored {
+  @extend %penalty-scored;
+}
+
+.timeline__event--booking {
+  @extend %yellow-card;
 }

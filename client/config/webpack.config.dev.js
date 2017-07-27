@@ -217,7 +217,7 @@ module.exports = {
       {
         test: /\.scss$/,
         include: paths.appSrc,
-        use: ['style-loader', 'css-loader', 'sass-loader?sourceMap=true',],
+        use: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap=true',],
       },
       // ** STOP ** Are you adding a new loader?
       // Remember to add the new extension(s) to the "file" loader exclusion list.

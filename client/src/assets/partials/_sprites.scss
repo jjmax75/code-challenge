@@ -1,47 +1,61 @@
+$sprite: './../img/football-events-sprite.png';
+
 %yellow-red {
-  background: url('./../img/football-events-sprite.png') no-repeat 0 0;
+  background: url($sprite) no-repeat 0 0;
 	width: 12px;
 	height: 15px;
 }
 
 %goal {
-  background: url('./../img/football-events-sprite.png') no-repeat 0 -25px;
+  background: url($sprite) no-repeat 0 -25px;
 	width: 12px;
 	height: 12px;
 }
 
 %save {
-  background: url('./../img/football-events-sprite.png') no-repeat 0 -47px;
+  background: url($sprite) no-repeat 0 -47px;
 	width: 26px;
 	height: 15px;
 }
 
 %red-card {
-  background: url('./../img/football-events-sprite.png') no-repeat 0 -142px;
+  background: url($sprite) no-repeat 0 -142px;
 	width: 11px;
 	height: 15px;
 }
 
 %yellow-card {
-  background: url('./../img/football-events-sprite.png') no-repeat 0 -225px;
+  background: url($sprite) no-repeat 0 -225px;
 	width: 11px;
 	height: 15px;
 }
 
 %whistle {
-  background: url('./../img/football-events-sprite.png') no-repeat 0 -207px;
+  background: url($sprite) no-repeat 0 -207px;
 	width: 12px;
 	height: 8px;
 }
 
 %sub-off {
-  background: url('./../img/football-events-sprite.png') no-repeat 0 -173px;
+  background: url($sprite) no-repeat 0 -173px;
 	width: 12px;
 	height: 4px;
 }
 
 %sub-on {
-  background: url('./../img/football-events-sprite.png') no-repeat 0 -187px;
+  background: url($sprite) no-repeat 0 -187px;
 	width: 12px;
 	height: 4px;
+}
+
+%penalty-scored {
+  background: url($sprite) no-repeat 0 -118px;
+	width: 17px;
+	height: 14px;
+}
+
+%penalty-missed {
+  background: url($sprite) no-repeat 0 -94px;
+	width: 15px;
+	height: 14px;
 }

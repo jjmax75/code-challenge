@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './filters.scss';
 
 const buildRadios = (handleFilterChange) => {
-  const filterTypes = ['Goal', 'Substitution', 'Booking', 'Penalty'];
+  const filterTypes = ['All', 'Goal', 'Substitution', 'Booking', 'Penalty'];
 
   return filterTypes.map(filter => (
     <button
